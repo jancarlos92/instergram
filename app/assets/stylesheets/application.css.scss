@@ -38,8 +38,8 @@
 }
 
 .title {
-	font-size: 2em;
 	text-align: center;
+	margin-top: 20px;
 }
 
 .container {
@@ -53,6 +53,18 @@
 	margin: auto;
 }
 
+#homepage-logo {
+	width: 200px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
 #homepage-container {
 }
 
@@ -60,7 +72,8 @@
 	width: 500px;
 	height: 600px;
 	margin: auto;
-	border-radius: 25px;
+	border: 1px #ddd solid;
+	border-radius: 5px;
 	padding: 20px;
 	background-color: #fff;
 
@@ -69,8 +82,9 @@
 }
 
 #homepage-background {
-	background-color: #aaa;
+	background-color: #f6f6f6;
 	height: 95vh;
+	border-top: 7px #ddd solid;
 }
 
 .clear {
