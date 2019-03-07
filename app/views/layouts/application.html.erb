@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instergram</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+      <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+
+          <h1>Instergram</h1>
+
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+              <% unless @logged_in %>
+            <li><%= link_to "Home", static_pages_home_path %></li>
+            <li><%= link_to "Sign up", new_user_path %></li>
+            <li><%= link_to "Log in", new_login_path %></li>
+
+            <% else  %>
+            Logged in as <%= @logged_in_user.username %>
+
+            <li>
+              <%= form_tag "/login/#{ @logged_in_user.id }", method: :delete do %>
+                <%= submit_tag "Log out" %>
+              <% end %>
+            </li>
+          <% end %>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <header>
+  <nav class="auth-nav">
+
+
+
+</nav>
+
+<div class="clear"></div>
+
+<% if @errors && @errors.any? %>
+<ul class="errors">
+  <% @errors.each do |error| %>
+  <li>
+      <%= error %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
+</header>
+
+
+
+
+    <div class="container">
+  <%= yield %>
+   </div>
+  </body>
+</html>
