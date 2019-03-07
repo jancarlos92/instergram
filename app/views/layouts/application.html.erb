@@ -9,10 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-      <header class="navbar navbar-fixed-top navbar-inverse">
+      <header class="navbar navbar-fixed-top">
       <div class="container">
+        <div class="content">
 
-          <h1>Instergram</h1>
+          <h1 class="logo">Instergram</h1>
 
         <nav>
           <ul class="nav navbar-nav navbar-right">
@@ -31,8 +32,10 @@
             </li>
           <% end %>
 
+          <div class="clear"></div>
           </ul>
         </nav>
+      </div>
       </div>
     </header>
 
@@ -60,6 +63,7 @@
 
 
     <div class="container">
+
   <%= yield %>
    </div>
   </body>
