@@ -30,6 +30,48 @@
  	background-color: #fff;
  }
 
+
+.image-grid {
+	width: 250px;
+}
+
+.image-grid-item {
+	width: 250px;
+	float: left;
+}
+
+.image-grid-item {
+	-webkit-filter: grayscale(85%);
+	filter: grayscale(85%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.image-grid-item:hover {
+	-webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+#post-content-title {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 1.8em;
+}
+
+.image-text {
+display: none;
+}
+
+.image-grid:hover .image-text {
+display: block;
+}
+
+
+
+
+
+
+
 .logo {
 	float: left;
 	margin: 0;

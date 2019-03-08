@@ -1,0 +1,19 @@
+<div class="container">
+	
+	<div class="content">
+		
+		<%= form_for @post do |f| %>
+
+			<%= f.label "Post Title" %>
+			<%= f.text_field :title %>
+
+			<%= f.label "Image" %>
+			<%= f.file_field :avatar %>
+
+			<%= f.submit %>
+
+		<% end %>
+
+	</div>
+
+</div>
