@@ -10,24 +10,37 @@
 </head>
 
 <body>
-  <div id="container">
-    <h1 class="logo">Instergram</h1>
-    <div id="form-box">
-      <div id="input-group">
-      </div>
-      <div id="progress-bar"></div>
-    </div>
-  </div>
+    
+      
 
 
-</body>
+    
+  
 
 
 
-</body>
 
-</html>
 
+
+
+
+<div class="container-all">
+  
+
+<div class="content">
+
+        <div class="logo"><%= link_to image_tag("instrgrm-logo-text") %></div>
+
+          <div id="form-box">
+
+            <div id="input-group">
+            </div>
+
+          <div id="progress-bar"></div>
+
+        </div>
+        <div class="clear"></div>
+  
 <%= form_tag login_index_path, :html => {:class => "form-horizontal center"} do |f| %>
 <div class="form-group">
    <%= label_tag :username, "Username:", class: "col-md-4 control-label" %>
@@ -56,3 +69,9 @@
 
   <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
   </div>
+
+</div>
+</div>
+</body>
+
+</html>
