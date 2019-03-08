@@ -19,7 +19,7 @@
  @import 'bootstrap';
 
  body {
-   padding-top: 70px;
+   padding-top: 55px;
  }
 
  h1 {
@@ -66,7 +66,32 @@ display: none;
 display: block;
 }
 
+.content ul {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
 
+
+.content ul li {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+.login-form {
+	width: 500px;
+	margin: auto;
+	text-align: center;
+	background-color: #fff;
+	height: 500px;
+}
+
+.container-all {
+	background-color: #f6f6f6;
+	height: 80vh;
+}
 
 
 
