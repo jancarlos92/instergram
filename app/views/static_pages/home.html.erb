@@ -1,10 +1,8 @@
 <div id="homepage-background">
 
-	<video autoplay muted loop id="myVideo">
-	  <source src="/videos/light.mp4" type="video/mp4">
-	</video>
 
-	<%# video_tag("/videos/light.mp4") %>
+
+
 
 	<div class="content">
 		<div id="homepage-content">
@@ -14,8 +12,10 @@
 				<img src="/assets/instrgrm.png" id="homepage-logo">
 			</div>
 
+
+
 			<div class="homepage-text">
-                <%= form_for new_login_path, :html => {:class => "form-horizontal center"} do |f| %>
+                <%= form_for static_pages_login_path, method: :get do |f| %>
                 <div class="form-group">
                    <%= f.label :username, "Username:", class: "col-md-4 control-label" %>
                 <div class="col-md-8">
@@ -43,6 +43,15 @@
 			</div>
 
 		</div>
+		<div class="errors">
+		    <% if flash[:errors]%>
+		    <% flash[:errors].each do |error|%>
+		    <h1><%= error %></h1>
+		    <%end%>
+		    <%end%>
+
+		</div>
+
 
 
 	</div>

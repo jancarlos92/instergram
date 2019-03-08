@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
 
 
+  get 'static_pages/home' => 'static_pages#home'
 
-  resources :static_pages, controller: 'login'
+  get 'static_pages/login' => 'static_pages#login'
 
+  post 'static_pages/login' => 'static_pages#login'
+
+
+ 
 
   resources :users , :posts
 
