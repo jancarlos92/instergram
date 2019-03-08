@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  get 'static_pages/home'
 
-  resources :users
-  resources :posts
+  get 'static_pages/home' => 'static_pages#home'
+
+  get 'static_pages/login' => 'static_pages#login'
+
+  post 'static_pages/login' => 'static_pages#login'
+
+
+ 
+
+  resources :users , :posts
+
 
   resources :login, only: [:new, :create, :update, :destroy]
 

@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+    include LoginHelper
 
 def new
 end
@@ -22,10 +23,5 @@ def destroy
      redirect_to new_login_path
 end
 
-private
-
-def log_in(user)
-session[:user_id] = user.id
-end
 
 end
