@@ -1,6 +1,7 @@
 class LoginController < ApplicationController
 
 def new
+    @user = User.new
 end
 
 def create
@@ -15,10 +16,10 @@ def create
 end
 
 
-
 def destroy
      current_user
      session[:user_id] = nil
+
      redirect_to new_login_path
 end
 
@@ -26,6 +27,10 @@ private
 
 def log_in(user)
 session[:user_id] = user.id
+end
+
+def current_user
+    @user = session[:user_id]
 end
 
 end

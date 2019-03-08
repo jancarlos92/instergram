@@ -1,52 +1,21 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Fancy Form</title>
-</head>
-
-<body>
-  <div id="container">
-    <h1 class="logo">Instergram</h1>
-    <div id="form-box">
-      <div id="input-group">
-      </div>
-      <div id="progress-bar"></div>
-    </div>
-  </div>
-
-
-</body>
-
-
-
-</body>
 
 </html>
 
-<%= form_tag login_index_path, :html => {:class => "form-horizontal center"} do |f| %>
-<div class="form-group">
-   <%= label_tag :username, "Username:", class: "col-md-4 control-label" %>
-<div class="col-md-8">
-     <%= text_field_tag :username, class: "form-control" %>
-</div>
-</div>
- <div class="form-group">
-         <%= label_tag :password, "Password:", class: "col-md-4 control-label" %>
-         <div class="col-md-8">
-           <%= password_field_tag :password, class: "form-control" %>
-           <%= submit_tag "Log in" %>
-           <%end%>
-        </div>
- </div>
 
-
-<div>
-
+<%= form_tag login_index_path do %>
+  <ul>
+    <li>
+      <%= label_tag :username %>
+      <%= text_field_tag :username %>
+    </li>
+    <li>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </li>
+  </ul>
+  <%= submit_tag "Log in" %>
+<% end %>
 
  <% if flash[:errors]%>
  <% flash[:errors].each do |error|%>

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
 
-  get 'static_pages/home'
 
-  resources :users
-  resources :posts
+
+  resources :static_pages, controller: 'login'
+
+
+  resources :users , :posts
+
 
   resources :login, only: [:new, :create, :update, :destroy]
 
